@@ -1,0 +1,72 @@
+html {
+  --Text-color: #121212;
+}
+
+html.dark {
+  --Text-color: #ffffff;
+}
+.tital {
+  color: var(--Text-color);
+  margin: 40px auto;
+}
+.listContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 25px 15px;
+}
+.listContainer article {
+  padding: 15px 20px;
+  border: 1px solid #333333;
+  border-radius: 20px;
+  background-color: var(--form-bg-color);
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.listContainer article img {
+  width: 100%;
+  border-radius: 15px;
+  background-size: cover;
+  margin: 10px 0 10px 0;
+  height: 180px;
+}
+.listContainer article div {
+  display: flex;
+  gap: 20px;
+  color: #ffffff;
+}
+.listContainer article div span {
+  padding: 7px 20px;
+  border-radius: 50px;
+  font-size: 14px;
+}
+.listContainer article div .likes {
+  background-color: #ef4444;
+}
+.listContainer article div .comments {
+  background-color: #3b82f6;
+}
+.listContainer article h3 {
+  color: var(--Text-color);
+  margin: 20px 0;
+  font-size: 25px;
+}
+.listContainer article p {
+  color: var(--Text-color);
+  margin-bottom: 10px;
+  font-weight: 700px;
+}
+@media screen and (max-width: 600px) {
+  .listContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+@media screen and (max-width: 950px) {
+  .listContainer {
+    grid-template-columns: 1fr 1fr;
+  }
+}

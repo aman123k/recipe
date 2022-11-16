@@ -1,0 +1,61 @@
+html {
+  --Text-color: #121212;
+  --form-bg-color: #ffffff;
+  --tw-text-opacity: rgba(85, 85, 85, 1);
+}
+
+html.dark {
+  --Text-color: #ffffff;
+  --form-bg-color: #212121;
+  --tw-text-opacity: rgba(197, 197, 197, 1);
+}
+body {
+  font-family: "roboto";
+}
+.profile {
+  background-color: var(--form-bg-color);
+  width: 240px;
+  border-radius: 10px;
+  margin: 80px auto 30px auto;
+}
+svg {
+  stroke: var(--Text-color);
+}
+.logOut {
+  margin: 0px auto;
+  width: 200px;
+  text-align: center;
+}
+.name {
+  color: var(--Text-color);
+  margin-bottom: 5px;
+  letter-spacing: 1px;
+}
+.userName {
+  color: var(--tw-text-opacity);
+  font-size: 17px;
+  font-weight: 1200px;
+  font-style: italic;
+  letter-spacing: 1px;
+}
+.logOutContainer .logOutbtn {
+  font-weight: 700px;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 8px 20px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 25px;
+  color: #ffffff;
+  background-color: #ef4444;
+  outline: none;
+  border: none;
+  letter-spacing: 1px;
+  border-radius: 5px;
+}
+@media screen and (max-width: 950px) {
+  .profile {
+    width: 170px;
+  }
+}

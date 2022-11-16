@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recipify | Favourite</title>
+    <link rel="stylesheet" href="../style/style.css" />
+    <link
+      rel="shortcut icon"
+      href="./Image/kindle-recipe-book-cover-template-design-77ad6a513d5016867f27f3790d0dad01_screen.jpg"
+    />
+    <link rel="stylesheet" href="../style/favourite.css" />
+    <script type="module" src="../js/global.js" defer></script>
+    <script type="module" src="./js/favourite.js" defer></script>
+  </head>
+  <body>
+    <header class="header">
+      <h1>Recipify.</h1>
+      <nav>
+        <ul class="destop_list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="addrecipe.html"> Add Recipe</a></li>
+        </ul>
+        <ul>
+          <li class="profile">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="w-full h-full"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
+              <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+          </li>
+          <div class="iconContainer">
+            <li>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-full h-full"
+                viewBox="0 0 24 24"
+                fill="none"
+                style="width: 20px"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="12" cy="12" r="4"></circle>
+                <path d="M12 2v2"></path>
+                <path d="M12 20v2"></path>
+                <path d="M5 5l1.5 1.5"></path>
+                <path d="M17.5 17.5L19 19"></path>
+                <path d="M2 12h2"></path>
+                <path d="M20 12h2"></path>
+                <path d="M5 19l1.5-1.5"></path>
+                <path d="M17.5 6.5L19 5"></path>
+              </svg>
+            </li>
+            <li class="moonIcon active">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-full h-full"
+                viewBox="0 0 24 24"
+                fill="none"
+                style="width: 20px"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+              </svg>
+            </li>
+          </div>
+        </ul>
+        <!-- Mobile_Header -->
+        <ul class="Mobile_Header">
+          <li>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-full w-full"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              style="width: 35px"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              ></path>
+            </svg>
+          </li>
+          <li class="active">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="cross"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              style="width: 35px"
+            >
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <!-- Mobile Header -->
+    <div class="mobile_list disable">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="addrecipe.html"> Add Recipe</a></li>
+      <li><a href="profile.html">Profile</a></li>
+    </div>
+    <h1 class="tital">Your Favourite Recipes</h1>
+    <div class="listContainer"></div>
+  </body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recipify | Sing up</title>
+    <link rel="stylesheet" href="../style/login.css" />
+    <link
+      rel="shortcut icon"
+      href="./Image/kindle-recipe-book-cover-template-design-77ad6a513d5016867f27f3790d0dad01_screen.jpg"
+    />
+    <script src="./js/global.js" defer=""></script>
+  </head>
+  <body>
+    <header class="header">
+      <h1>Recipify.</h1>
+      <nav>
+        <ul>
+          <div class="iconContainer">
+            <li>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-full h-full"
+                viewBox="0 0 24 24"
+                fill="none"
+                style="width: 20px"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="12" cy="12" r="4"></circle>
+                <path d="M12 2v2"></path>
+                <path d="M12 20v2"></path>
+                <path d="M5 5l1.5 1.5"></path>
+                <path d="M17.5 17.5L19 19"></path>
+                <path d="M2 12h2"></path>
+                <path d="M20 12h2"></path>
+                <path d="M5 19l1.5-1.5"></path>
+                <path d="M17.5 6.5L19 5"></path>
+              </svg>
+            </li>
+            <li class="moonIcon active">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-full h-full"
+                viewBox="0 0 24 24"
+                fill="none"
+                style="width: 20px"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+              </svg>
+            </li>
+          </div>
+        </ul>
+      </nav>
+    </header>
+    <section class="firstPage">
+      <form action="">
+        <h1>Sign up</h1>
+        <hr />
+        <div class="contactPerson">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="w-full h-full"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
+            <circle cx="12" cy="7" r="4"></circle>
+          </svg>
+        </div>
+        <label for="Name"
+          >Name<span class="texLabel">*</span>
+          <input required class="Name" type="text" />
+        </label>
+        <label for="Name"
+          >Username<span class="texLabel">*</span>
+          <input type="text" class="Username" required />
+        </label>
+        <label for="Name"
+          >Password<span class="texLabel">*</span>
+          <input type="password" class="Password" required />
+        </label>
+        <input type="submit" class="Submit" value="Submit" />
+      </form>
+    </section>
+    <script>
+      const user = localStorage.getItem("user");
+      if (user) {
+        window.location.href = "index.html";
+      }
+      const form = document.querySelector("form");
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        let name = document.querySelector(".Name").value;
+        let username = document.querySelector(".Username").value;
+        let password = document.querySelector(".Password").value;
+        const User = {
+          name: name,
+          username: username,
+          password: password,
+        };
+        // set user information in localstorage
+        localStorage.setItem("user", JSON.stringify(User));
+        // Open Home Page
+        window.location.href = "index.html";
+      });
+    </script>
+  </body>
+</html>
