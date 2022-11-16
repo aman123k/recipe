@@ -62,6 +62,7 @@ article,
   border-radius: 6px;
   border: none;
   background-color: var(--input-bg-color);
+  color: var(--Text-color);
 }
 .recipeContainer .imagecontainer {
   width: 100%;
@@ -151,6 +152,7 @@ article,
 .recipeContainer .from1 .submitIngredient {
   background-color: #10b981;
   font-weight: normal;
+  color: #ffffff;
 }
 .recipeContainer .form2 {
   margin-top: 10px;
