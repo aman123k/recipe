@@ -186,6 +186,7 @@ article,
   background-color: var(--input-bg-color);
   border-radius: 10px;
   margin-top: 10px;
+  color: var(--Text-color);
 }
 .recipeContainer .form2 .addStep {
   background-color: #10b981;
