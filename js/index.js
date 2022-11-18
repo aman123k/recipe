@@ -15,11 +15,16 @@ const heroSection = document.querySelector(".hero-section");
 const heroSerch = document.querySelector(".heroSerch");
 // to focus on search
 document.addEventListener("keydown", (e) => {
-  e.preventDefault();
   if (e.key.toLowerCase() === "/" && e.ctrlKey) {
-    heroSerch.click();
-    console.log("hello")
+    heroSerch.focus();
   }
+})
+// click to search recipe
+heroSerch.addEventListener('change', () => {
+  const searchedRecipes = recipeRegister.filter(recipe => {
+    return recipe.name.includes(heroSerch.value)
+  })
+  renderItems(searchedRecipes)
 })
 // Hero change recipe
 const randomRecipe = recipeRegister[Math.floor(Math.random() * 9)];
@@ -51,16 +56,16 @@ btns.forEach((btn) => {
     let Ingredients = e.currentTarget.dataset.id;
     let category = recipeRegister.filter(item => item.ingredients.find(t => t.type === Ingredients));
     if (Ingredients === "All") {
-      renderItem(recipeRegister)
+      renderItems(recipeRegister)
       OpenrecipeInfo()
     } else {
-      renderItem(category);
+      renderItems(category);
       OpenrecipeInfo()
     }
   })
 })
 // Insert data in home Page
-function renderItem(menuData) {
+function renderItems(menuData) {
   let recipe = menuData.map((item) => {
     return ` <article data-id="${item.ingredients[0].type} ">
       <img src="${item.imageURL}" alt="" />
@@ -74,7 +79,7 @@ function renderItem(menuData) {
   }).join("");
   listContainer.innerHTML = recipe;
 }
-renderItem(recipeRegister);
+renderItems(recipeRegister);
 // seclet each artical to Open recipe-details.html
 function OpenrecipeInfo() {
   const articles = document.querySelectorAll('article');
@@ -88,6 +93,5 @@ function OpenrecipeInfo() {
 }
 OpenrecipeInfo()
 
-export { renderItem }
 
 
