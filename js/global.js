@@ -499,7 +499,7 @@ const menu = [
 if (!localStorage.getItem('recipes')) {
     localStorage.setItem('recipes', JSON.stringify(menu));
 }
-// collocte button and Html Page for darkmode and Light mode
+// collect button and Html Page for darkmode and Light mode
 const IconContainer = document.querySelector(".iconContainer");
 const HTMLpage = document.querySelector("html");
 const sunIcon = IconContainer.children[0];
